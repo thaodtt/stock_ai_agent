@@ -1,0 +1,18 @@
+[project]
+name = "stock_ai_agent"
+version = "0.1.0"
+dependencies = [
+    "dotenv>=0.9.9",
+    "google-auth>=2.40.3",
+    "google-genai>=1.25.0",
+    "google-generativeai>=0.8.5",
+    "gspread>=6.2.1",
+    "jinja2>=3.1.6",
+    "logger>=1.4",
+    "loguru>=0.7.3",
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.0",
+    "premailer>=3.10.0",
+    "requests-html>=0.10.0",
+    "yahoo-fin>=0.8.9.1",
+]
