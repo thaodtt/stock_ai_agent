@@ -11,6 +11,14 @@ An automated stock analysis and reporting system that generates comprehensive st
 - **Technical Analysis**: Calculate 20, 50, and 200-day moving averages plus returns analysis
 - **Real-time Data**: Fetch current stock prices using Yahoo Finance integration
 
+## Sample Output
+
+Here's an example of the generated stock report:
+
+![Sample Stock Report](sample-report.png)
+
+*The report includes current prices, moving averages, percentage returns, and technical analysis for each stock in your portfolio.*
+
 ## Architecture
 
 The system consists of two main pipelines:
@@ -84,7 +92,7 @@ For Google Sheets integration, you need a service account:
 
 ### 3. Stock Configuration
 
-**Option 1: Use Google Sheets** (for `main.py`)
+**Option 1: Use Google Sheets**
 - Create a Google Sheet with a "name" column containing stock symbols
 - Set the `STOCK_NAME_SPREADSHEET_ID` in your `.env` file
 
@@ -104,8 +112,7 @@ Run the main stock analysis pipeline:
 Or manually:
 
 ```bash
-source .venv/bin/activate
-python main.py
+source .venv/bin/activate && python send_report.py
 ```
 
 This will:
@@ -139,7 +146,7 @@ This will:
 
 ```
 stock_ai_agent/
-├── main.py                           # Main stock report pipeline
+├── run_report.py                     # Main stock report pipeline
 ├── earning_call_summary.py           # Earnings call analysis pipeline
 ├── run.sh                           # Stock report execution script
 ├── run_earning_call_summary.sh      # Earnings analysis script

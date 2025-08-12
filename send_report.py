@@ -10,7 +10,7 @@ RECIPIENT_EMAILS = os.getenv("RECIPIENT_EMAILS")
 STOCK_NAME_SPREADSHEET_ID = os.getenv("STOCK_NAME_SPREADSHEET_ID", None)
 
 if __name__ == "__main__":
-    if STOCK_NAME_SPREADSHEET_ID is None:
+    if not STOCK_NAME_SPREADSHEET_ID:
         stock_names = STOCK_SYMBOLS
     else:
         stock_name_df = read_google_sheets(spreadsheet_id=STOCK_NAME_SPREADSHEET_ID)
